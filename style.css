@@ -1,0 +1,59 @@
+/*
+  Theme Name:   GWB Child
+  Theme URI:    http://example.com/twenty-fifteen-child/
+  Description:  Glades Child Theme
+  Author:       Martin Yoakum
+  Author URI:   http://yomartin.com
+  Template:     glades
+  Version:      0.0.1
+  License:      GNU General Public License v2 or later
+  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+  Text Domain:  gwbchild
+*/
+
+.top-news {
+	border-bottom: 3px solid #1188cc;
+	margin-bottom: 1.2em;
+}
+.top-news article {
+	padding-left: 66px;
+	position: relative;
+}
+.top-news article img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 50px;
+}
+
+.top-news-title {
+	margin-bottom: 1em;
+	border-bottom: 3px solid #1188cc;
+}
+.top-news-title span {
+	display: inline-block;
+	font-family: 'Contrail One', Tahoma, Arial;
+	font-size: 0.95em;
+	line-height: 1.4em;
+	text-transform: uppercase;
+	color: #fff;
+	background: #1188cc;
+	border-bottom: 2px solid #fff;
+	padding: 0.5em 0.8em;
+}
+.top-news .more-link,
+.top-news .more-link:hover, .top-news .more-link:active,
+.top-news .more-link:link, .top-news .more-link:visited  {
+	display: inline;
+	margin: 0;
+	padding: 0;
+	font-family: 'PT Sans', Arial, Verdana;
+	font-size: inherit;
+	text-transform: none;
+	text-decoration: none;
+	color: #1188cc;
+	background: transparent;
+}
+.top-news .more-link:after {
+	content: "\2192";
+}
