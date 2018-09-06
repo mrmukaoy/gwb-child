@@ -9,10 +9,19 @@ function gwbchild_enqueue_styles() {
 	wp_enqueue_style( 'child-style',
 		get_stylesheet_directory_uri() . '/style.css',
 		array( $parent_style ),
-		wp_get_theme()->get('Version')
+		wp_get_theme()->get( 'Version' )
 	);
 }
 add_action( 'wp_enqueue_scripts', 'gwbchild_enqueue_styles' );
+
+// include Top News CPT into main RSS feed
+function myfeed_request( $qv ) {
+	if ( isset( $qv['feed'] ) && ! isset( $qv['post_type'] ) ) {
+		$qv['post_type'] = array( 'post', 'top_news' );
+	}
+	return $qv;
+}
+add_filter( 'request', 'myfeed_request' );
 
 if ( ! function_exists( 'glades_site_title' ) ) {
 	/**
